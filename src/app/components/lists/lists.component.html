@@ -1,0 +1,10 @@
+<button (click)='toggleOpen()'>Show</button>
+<div class="modal"  *ngIf='isOpen' >
+    <div class="searchContainer">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" class="searchIcon">search</mat-icon>
+        <input class="search" type="text" [(ngModel)] = 'query' (keyup)='onChangeSearch($event)' placeholder="Search Spaces, Folders, List"/>
+    </div>
+    <div class="listContainer">
+        <app-list-item *ngFor='let task of tasks' [task] = 'task'></app-list-item>
+    </div>
+</div>

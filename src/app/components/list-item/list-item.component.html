@@ -1,0 +1,16 @@
+<li (mouseover)='hover(task.id)'  >
+    <span class="icon" [ngStyle]="{ 'backgroundColor': getColor(task.title[0]) }">{{ task.title[0] }}</span>
+    <span>{{ task.title }} </span>
+    <span *ngIf='isHover === task.id'> 
+       <span class="add_btn" (click)='isAddClick()'> + </span>
+       <!-- <span class="add_btn" (click)='isDeleteClick(task.id)'> - </span> -->
+       <br/>
+       <span *ngIf='isAdd'> 
+            <input [(ngModel)]='newList' type='text' /> 
+            <button (click)='addInList(task)' > Add  </button>
+       </span>
+    </span>
+    <ul *ngIf='task.list.length'>
+        <app-list-item *ngFor='let task of task.list;' [task] = 'task' ></app-list-item>
+    </ul>
+</li>

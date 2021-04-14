@@ -1,0 +1,30 @@
+li {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    list-style: none;
+}
+
+.icon {
+    border: 1px solid;
+    width: 20px;
+    border-radius: 4px;
+    margin-right: 5px;
+    color: #FFF;
+    display: inline-block;
+    text-align: center;
+
+}
+
+.add_btn {
+    border: 1px solid;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #412846;
+    color: #fafafa;
+    cursor: pointer;
+}
